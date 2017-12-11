@@ -10,15 +10,27 @@
         android:id="@+id/simsimi_image"
         android:src="@drawable/simsimi"/>
 
+
+
+
     <com.github.library.bubbleview.BubbleTextView
         android:id="@+id/text_message"
         android:padding="10dp"
         android:textColor="#FFF"
+
+        android:layout_toRightOf="@+id/simsimi_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/simsimi_image"
-        android:layout_toEndOf="@+id/simsimi_image" />
+        app:arrowWidth="8dp"
+        app:angle="8dp"
+        app:arrowHeight="10dp"
+        app:arrowPosition="14dp"
+        app:arrowLocation="left"
+        app:arrowCenter="true"
+        app:bubbleColor="@color/colorAccent"
+
+        />
+
 
 </RelativeLayout>

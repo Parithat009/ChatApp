@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 list_chat.add(model);
                 new SimsimiApi().execute(list_chat);
 
-                editText.setText("'");
+                editText.setText("");
             }
         });
 
@@ -65,10 +65,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             Gson gson = new Gson();
-            SimsimiModel responce = gson.fromJson(s , SimsimiModel.class);
+            SimsimiModel response = gson.fromJson(s , SimsimiModel.class);
 
-            ChatModel chatModel = new ChatModel(responce.getResponce(),false);
+            ChatModel chatModel = new ChatModel(response.getResponse(),false);
+
             models.add(chatModel);
+
             CustomAdapter adapter = new CustomAdapter(models,getApplicationContext());
             listView.setAdapter(adapter);
 

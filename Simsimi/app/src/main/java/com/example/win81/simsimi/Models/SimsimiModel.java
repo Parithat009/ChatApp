@@ -6,13 +6,13 @@ package com.example.win81.simsimi.Models;
 
 public class SimsimiModel {
 
-    public String responce;
+    public String response;
     public String id;
     public int result;
     public String msg;
 
-    public SimsimiModel(String responce, String id, int result, String msg) {
-        this.responce = responce;
+    public SimsimiModel(String response, String id, int result, String msg) {
+        this.response = response;
         this.id = id;
         this.result = result;
         this.msg = msg;
@@ -21,12 +21,12 @@ public class SimsimiModel {
     public SimsimiModel() {
     }
 
-    public String getResponce() {
-        return responce;
+    public String getResponse() {
+        return response;
     }
 
-    public void setResponce(String responce) {
-        this.responce = responce;
+    public void setResponse(String response) {
+        this.response = response;
     }
 
     public String getId() {
